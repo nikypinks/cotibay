@@ -6,12 +6,45 @@ app = Flask(__name__)
 HTML = '''
 <!DOCTYPE html>
 <html>
-<head><title>Cotizador eBay</title></head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cotizador eBay</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f8f9fa;
+    }
+    h2 {
+      color: #333;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
 <body>
   <h2>Cotizador Hollander → eBay</h2>
   <form method="POST">
-    <input type="text" name="url" placeholder="Pega el URL de Hollander" required style="width:300px">
-    <button type="submit">Buscar en eBay</button>
+    <input type="text" name="url" placeholder="Pega aquí el URL de Hollander" required>
+    <button type="submit">🔍 Buscar en eBay</button>
   </form>
 </body>
 </html>
